@@ -27,13 +27,14 @@ let autoScroll = setInterval(scrolling, delay);
 
 function scrolling() {
     totalScroll++;
-    // console.log(totalScroll);
-    if (totalScroll == imageLength + 1) {
+    if (totalScroll >= imageLength + 1) {
         clearInterval(autoScroll);
         totalScroll = 0;
         imageWrapper.style.transition = '0s';
         imageWrapper.style.left = '0';
-        autoScroll = setInterval(scrolling, delay);
+        setTimeout(() => {
+            autoScroll = setInterval(scrolling, delay);
+        }, 100); // Add a small delay before restarting
     } else {
         const widthEl = document.querySelector('.image-wrapper > :first-child').offsetWidth + 20; // Adjust width calculation with gaps
         imageWrapper.style.left = `-${totalScroll * widthEl}px`;
@@ -47,40 +48,33 @@ const dots = document.querySelectorAll('.dot');
 let activeDotIndex = 0;
 
 function updateDots() {
-    dots[activeDotIndex].classList.remove('active');
+    dots.forEach(dot => dot.classList.remove('active'));
     activeDotIndex = totalScroll % imageLength;
-    dots[activeDotIndex].classList.add('active');
+    if (dots[activeDotIndex]) {
+        dots[activeDotIndex].classList.add('active');
+    }
 }
 
 function currentSlide(index) {
-    console.log(index)
     clearInterval(autoScroll);
-    totalScroll = index-1;
+    totalScroll = index - 1;
     scrolling();
     autoScroll = setInterval(scrolling, delay);
 }
 
-for (let i = 0; i < dots.length; i++) {
-    if (dots[i]) {
-        dots[i].addEventListener('click', () => currentSlide(i));
-    }
-}
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => currentSlide(index));
+});
 
-slides.forEach((slide, index) => {
+slides.forEach((slide) => {
     slide.addEventListener('mouseover', () => {
         clearInterval(autoScroll);
     });
     slide.addEventListener('mouseout', () => {
         autoScroll = setInterval(scrolling, delay);
     });
-    console.log(dots[index]);
-    if (dots[index]) {
-        dots[index].addEventListener('click', () => currentSlide(index));
-    }
 });
 
-
-autoScroll = setInterval(scrolling, delay);
 updateDots();
 
 
