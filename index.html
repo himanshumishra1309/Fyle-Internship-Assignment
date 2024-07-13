@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <h1>AWARD WINNING</h1>
+            <h2>DIGITAL MARKETING AGENCY</h2>
+            <p>Morbi sed lacus nec risus finibus faucibus et fermentum nibh. Pellentesque vitae ante at elit fringilla ac et purus. Morbi sed lacus nec risus finibus faucibus et fermentum.</p>
+            <button id="contactButton">Contact Us</button>
+        </div>
+        <div class="image-section">
+            <img src="hero@2x.png" alt="Digital Marketing">
+        </div>
+    </div>
+    <div class="popup-form" id="popupForm">
+        <form class="form-content" action="https://getform.io/f/alljlxna" method="post">
+            <h3>Talk to us</h3>
+            <input class="email" type="email" name="email" placeholder="Work email*" required>
+            <div style="display: flex; gap: 10px;">
+                <input class="first-name" type="text" name="first-name" placeholder="First name*" required>
+                <input class="last-name" type="text" name="last-name" placeholder="Last name*" required>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" name="terms" required>
+                <label>I agree to Fyle's terms and conditions, and provide consent to send me communication.</label>
+            </div>
+            <button type="submit">Contact Us</button>
+        </form>
+    </div>
+    <div class="services-slider">
+        <div class="slider-title">
+            <h2>WHAT WE DO</h2>
+            <div class="slider-title-content">
+                <h1 class="heading-slider-title-content">SERVICES PROVIDE FOR YOU</h1>
+                <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum.</p>
+            </div>
+        </div>
+        <div class="slider" id="slider">
+            <div class="image-wrapper">
+                <div class="slide">
+                    <img src="1@2x.png" alt="Service 1">
+                    <div class="hover-content">
+                        <h3>WEB DEVELOPMENT</h3>
+                        <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque.</p>
+                        <a href="https://fylehq.com" target="_blank">READ MORE</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="2@2x.png" alt="Service 2">
+                    <div class="hover-content">
+                        <h3>WEB DEVELOPMENT</h3>
+                        <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque.</p>
+                        <a href="https://fylehq.com" target="_blank">READ MORE</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="3@2x.png" alt="Service 3">
+                    <div class="hover-content">
+                        <h3>WEB DEVELOPMENT</h3>
+                        <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque.</p>
+                        <a href="https://fylehq.com" target="_blank">READ MORE</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img1.jpg" alt="Service 1">
+                    <div class="hover-content">
+                        <h3>WEB DEVELOPMENT</h3>
+                        <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque.</p>
+                        <a href="https://fylehq.com" target="_blank">READ MORE</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img2.jpg" alt="Service 1">
+                    <div class="hover-content">
+                        <h3>WEB DEVELOPMENT</h3>
+                        <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque.</p>
+                        <a href="https://fylehq.com" target="_blank">READ MORE</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img3.jpg" alt="Service 1">
+                    <div class="hover-content">
+                        <h3>WEB DEVELOPMENT</h3>
+                        <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque.</p>
+                        <a href="https://fylehq.com" target="_blank">READ MORE</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img4.jpg" alt="Service 1">
+                    <div class="hover-content">
+                        <h3>WEB DEVELOPMENT</h3>
+                        <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque.</p>
+                        <a href="https://fylehq.com" target="_blank">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dots" id="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+    <div>
+        <h2>OUR PROJECT</h2>
+    <h1>WHY WE ARE BEST</h1>
+    <div class="container-2">
+        <div class="image-container-2">
+            <img id="mainImage" src="img6.jpg" alt="Image 1">
+        </div>
+        <div class="content-container-2">
+            <div class="content-item" data-image="img6.jpg">
+                Genderless Kei – Japan’s Hot<br>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of
+            </div>
+            <div class="content-item" data-image="img7.jpg">
+                Better Strategy & Quality<br>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of
+            </div>
+            <div class="content-item" data-image="img8.jpg">
+                Genderless Kei – Japan’s Hot<br>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
